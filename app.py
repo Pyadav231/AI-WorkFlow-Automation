@@ -9,7 +9,11 @@ from ml_classifier import classify_email_ml
 from response_generator import generate_response
 
 # FastAPI app
-app = FastAPI()
+app = FastAPI(
+    title="AI Workflow API",
+    docs_url="/docs",
+    redoc_url="/redoc"
+)
 
 # Logging setup
 logging.basicConfig(level=logging.INFO)
